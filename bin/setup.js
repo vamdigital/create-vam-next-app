@@ -11,7 +11,7 @@ const defaultFolderName = 'my-app'
 const initWorkingDirectory = process.cwd()
 let folderName = defaultFolderName
 let isVSCode = false
-const repo = 'https://github.com/vamdigital/create-vam-app.git'
+const repo = 'https://github.com/vamdigital/create-vam-next-app.git'
 const execPromise = promisify(exec)
 
 console.log(
@@ -36,7 +36,7 @@ async function setup() {
     rainbow.start()
 
     // Remove items from Package.json files
-    fs.readFile(`${folderPath}/package.json`, 'utf8', function (err, data) {
+    fs.readFile(`${folderPath}/package.json`, 'utf8', function(err, data) {
       if (err) {
         return console.log(err)
       }
@@ -63,7 +63,7 @@ async function setup() {
         `${folderPath}/package.json`,
         result,
         'utf8',
-        function (error) {
+        function(error) {
           if (error) return console.log(error)
         }
       )

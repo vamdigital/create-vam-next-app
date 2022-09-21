@@ -1,7 +1,9 @@
 {
   "name": "vam-create-next",
   "version": "0.1.0",
-  "private": true,
+  "type": "module",
+  "bin":"bin/setup.js",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
